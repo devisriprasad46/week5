@@ -1,0 +1,45 @@
+# WEEK 5: FEW-SHOT VS. ZERO-SHOT COMPARISON
+ 
+print("===== WEEK 5: FEW-SHOT VS. ZERO-SHOT =====")
+ 
+text = "The movie was amazing and I really enjoyed it."
+ 
+zero_shot_prompt = f"""
+Classify the sentiment of the following text as
+Positive, Negative, or Neutral.
+ 
+Text: "{text}"
+ 
+Sentiment:
+"""
+ 
+few_shot_prompt = f"""
+Classify the sentiment as Positive, Negative, or Neutral.
+ 
+Examples:
+ 
+Text: "I really love this product."
+Sentiment: Positive
+ 
+Text: "The service was terrible."
+Sentiment: Negative
+ 
+Text: "The meeting starts at 10 AM."
+Sentiment: Neutral
+ 
+Now classify:
+ 
+Text: "{text}"
+ 
+Sentiment:
+"""
+ 
+print("\n--- ZERO-SHOT PROMPT ---")
+print(zero_shot_prompt)
+ 
+print("\n--- FEW-SHOT PROMPT ---")
+print(few_shot_prompt)
+ 
+print("\n--- COMPARISON ---")
+print("Zero-Shot: No examples are provided.")
+print("Few-Shot: Examples are provided before the actual task.")
